@@ -57,8 +57,41 @@ html {
     .second-nav-link:hover {
       color: #999999; }
 
-.dropdown {
-  display: none; }
+.first-nav {
+  grid-column: 7 / 10;
+  grid-row: 1 / 2; }
+  .first-nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+  .first-nav-item {
+    list-style-type: none; }
+  .first-nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all .3s; }
+    .first-nav-link:hover {
+      color: #999999; }
+
+.second-nav {
+  grid-column: 3 / 8;
+  grid-row: 3/4; }
+  .second-nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+  .second-nav-item {
+    list-style-type: none; }
+  .second-nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all .3s; }
+    .second-nav-link:hover {
+      color: #999999; }
 
 .logo {
   grid-column: 1 / 2;
@@ -77,3 +110,54 @@ html {
     font-size: 6rem;
     font-weight: lighter;
     letter-spacing: .5rem; }
+
+.dropdown-li {
+  position: relative; }
+  .dropdown-li::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: bold; }
+  .dropdown-li:hover .dropdown {
+    visibility: visible;
+    opacity: 1; }
+
+.dropdown {
+  position: absolute;
+  top: 3rem;
+  right: -2.8rem;
+  width: 10rem;
+  background-color: #e6e2e4;
+  padding: 1rem;
+  text-align: center;
+  border-radius: .2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s; }
+  .dropdown-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+  .dropdown-item {
+    list-style-type: none; }
+  .dropdown-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all .3s; }
+    .dropdown-link:hover {
+      color: #999999; }
+  .dropdown::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1.5rem;
+    left: 7.3 rem;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #e6e2e4;
+    border-left: 15px solid transparent; }
+  .dropdown-item {
+    margin: .5rem 0; }
+  .dropdown-link {
+    font-weight: 300;
+    font-size: 1.6rem; }
